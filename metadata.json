@@ -1,0 +1,6 @@
+{
+  "name": "Portal Game CSV Generator",
+  "description": "Paste tab-separated game data from Monday.com.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
