@@ -1,16 +1,16 @@
 
 import React, { useState, useCallback } from 'react';
-import { Header } from './components/Header';
-import { TextInputArea } from './components/TextInputArea';
-import { ActionButton } from './components/ActionButton';
-import { DataTable } from './components/DataTable';
-import { ProcessIcon } from './components/icons/ProcessIcon';
-import { DownloadIcon } from './components/icons/DownloadIcon';
-import { TableIcon } from './components/icons/TableIcon';
-import { ClearIcon } from './components/icons/ClearIcon';
-import { ProcessedGameData, GameProviderFolderMapping } from './types';
-import { GAME_PROVIDER_TO_FOLDER_MAP_CA, GAME_PROVIDER_TO_FOLDER_MAP_COM, APP_TITLE, OUTPUT_CSV_COLUMNS, PLACEHOLDER_INFO_REQUIRED_COLUMNS } from './constants';
-import { parsePastedData, generateCsvContent } from './services/dataProcessor';
+import { Header } from './components/Header.tsx';
+import { TextInputArea } from './components/TextInputArea.tsx';
+import { ActionButton } from './components/ActionButton.tsx';
+import { DataTable } from './components/DataTable.tsx';
+import { ProcessIcon } from './components/icons/ProcessIcon.tsx';
+import { DownloadIcon } from './components/icons/DownloadIcon.tsx';
+import { TableIcon } from './components/icons/TableIcon.tsx';
+import { ClearIcon } from './components/icons/ClearIcon.tsx';
+import { ProcessedGameData, GameProviderFolderMapping } from './types.ts';
+import { GAME_PROVIDER_TO_FOLDER_MAP_CA, GAME_PROVIDER_TO_FOLDER_MAP_COM, APP_TITLE, OUTPUT_CSV_COLUMNS, PLACEHOLDER_INFO_REQUIRED_COLUMNS } from './constants.ts';
+import { parsePastedData, generateCsvContent } from './services/dataProcessor.ts';
 
 const App: React.FC = () => {
   const [rawText, setRawText] = useState<string>('');
