@@ -1,4 +1,4 @@
-import { GameProviderFolderMapping, ProcessedGameData } from './types.ts';
+import { GameProviderFolderMapping, ProcessedGameData } from './types';
 
 export const APP_TITLE = "Portal Game CSV Generator";
 
