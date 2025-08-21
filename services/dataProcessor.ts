@@ -109,23 +109,30 @@ export function parsePastedData(
     const defaultUserImageValue = getCellValue('DEFAULT_USER_IMAGE');
 
     if (defaultUserImageValue) {
-      if (
-        defaultUserImageValue.startsWith('http://') ||
-        defaultUserImageValue.startsWith('https://') ||
-        defaultUserImageValue.startsWith('/library/')
-      ) {
-        defaultGameImage = defaultUserImageValue;
-      } else {
-        const pathSegment = defaultUserImageValue.startsWith('/')
-          ? defaultUserImageValue.substring(1)
-          : defaultUserImageValue;
-        defaultGameImage = `library/${pathSegment}`;
-      }
+        if (
+            defaultUserImageValue.startsWith('http://') ||
+            defaultUserImageValue.startsWith('https://')
+        ) {
+            defaultGameImage = defaultUserImageValue;
+        } else {
+            let path = defaultUserImageValue.trim();
+            // Normalize by removing any leading slash to start clean
+            if (path.startsWith('/')) {
+                path = path.substring(1);
+            }
+            // If the path already includes the 'library' root, just ensure it has a leading slash.
+            if (path.toLowerCase().startsWith('library/')) {
+                defaultGameImage = `/${path}`;
+            } else {
+                // Otherwise, prepend '/library/'
+                defaultGameImage = `/library/${path}`;
+            }
+        }
     } else {
       const folderNameFromMap = providerMap[originalGameProvider]; // Use the passed providerMap
       const providerFolderName = folderNameFromMap || originalGameProvider; 
       const encodedFolderName = encodeURIComponent(providerFolderName);
-      defaultGameImage = `library/Game%20Icons/${encodedFolderName}/${gameCode}.webp`;
+      defaultGameImage = `/library/Game%20Icons/${encodedFolderName}/${gameCode}.webp`;
     }
     
     const mobileGameCode = getCellValue('MOBILE_GAME_CODE') || gameCode;

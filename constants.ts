@@ -35,7 +35,7 @@ export const GAME_PROVIDER_TO_FOLDER_MAP_CA: GameProviderFolderMapping = {
   "SkyWind": "SkyWind",
   "Skywind": "SkyWind", // Ensure consistent folder casing
   "Drops & Wins": "Drops & Wins",
-  "RubyPlay": "RubyPlay", // Added based on COM screenshot, ensuring consistency if used in CA
+  "RubyPlay": "Rubyplay", // Custom folder name for CA export
   "Test": "Test" // Added based on COM screenshot
 };
 
