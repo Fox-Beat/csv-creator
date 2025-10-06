@@ -18,7 +18,7 @@ export const GAME_PROVIDER_TO_FOLDER_MAP_CA: GameProviderFolderMapping = {
   "High5 via SG": "High 5",
   "Lightning Box": "Lightning Box",
   "Peter & Sons": "Peter & Sons",
-  "Quickspin": "Quicksplin", // Note: COM version uses "Quickspin"
+  "Quickspin": "Quickspin",
   "SG": "SG",
   "Wazdan": "Wazdan",
   "Blueprint": "Blueprint",
@@ -49,7 +49,7 @@ export const GAME_PROVIDER_TO_FOLDER_MAP_COM: GameProviderFolderMapping = {
   "Peter & Sons": "Peter & Sons",
   "Playtech": "Playtech",
   "Pragmatic": "Pragmatic",
-  "Quickspin": "Quickspin", // Screenshot: "Quickspin" (CA: "Quicksplin")
+  "Quickspin": "Quickspin",
   "RubyPlay": "RubyPlay",
   "Test": "Test",
 
